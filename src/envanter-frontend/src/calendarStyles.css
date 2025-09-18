@@ -1,0 +1,124 @@
+/* Toolbar butonları aralıklı olsun */
+.fc-toolbar.fc-header-toolbar .fc-toolbar-chunk button {
+  margin: 0 8px;       /* Butonlar arası boşluk */
+  border-bottom: 2px solid #007bff; /* Alt çizgi */
+  border-radius: 4px;  /* Hafif yuvarlak köşe */
+  padding: 4px 12px;
+  font-weight: bold;
+}
+
+/* Bugün butonunu normal görünümde yap, yazısı BÜYÜK olsun */
+.fc-button.fc-today-button {
+  text-transform: uppercase;
+  background: none;   /* Buton görünümünü kaldır */
+  border: none;
+  box-shadow: none;
+  color: #007bff;
+}
+
+/* Ay/Gün seçim düğmelerini buton gibi değil aralıklı yap */
+.fc-button.fc-button-primary {
+  background: none;
+  border: none;
+  box-shadow: none;
+  color: #007bff;
+  text-transform: capitalize;
+}
+
+/* Hover efekti */
+.fc-button:hover {
+  background: #e6f0ff;
+  border-radius: 4px;
+}
+
+/* FullCalendar event kutuları */
+.fc-event {
+  border-radius: 6px;
+  padding: 8px 10px;   /* Daha fazla iç boşluk */
+  font-size: 0.95rem;  /* Yazı boyutu biraz büyüt */
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+  min-height: 70px;    /* Minimum yükseklik */
+  display: flex;
+  align-items: center; /* Yazıyı dikey ortala */
+  justify-content: center; /* Yazıyı yatay ortala */
+  white-space: normal; /* Çok uzun yazılar satır atlamalı */
+}
+
+/* Ay görünümü event kutuları */
+.fc-daygrid-event {
+  background-color: #6b2727; /* inline renkleri kullan */
+  color: #ffffff !important;
+  border-radius: 6px;
+  padding: 4px 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2px;
+  box-sizing: border-box;
+}
+
+/* Ay görünümü hafta satırlarını çift renkli yap */
+.fc-daygrid-body tr:nth-child(odd) {
+  background-color: #f9f9f9; /* Açık renk */
+}
+
+.fc-daygrid-body tr:nth-child(even) {
+  background-color: #e6e6e6; /* Biraz daha koyu */
+}
+
+.fc-daygrid-body tr {
+  height: 120px; /* Her satırın sabit yüksekliği, isteğe göre artırabilirsiniz */
+  display: block; /* Scroll için blok yap */
+  overflow-y: auto; /* Yatay scroll yerine dikey scroll */
+}
+
+.fc-daygrid-body tr td {
+  display: inline-block; /* Blok gibi yan yana */
+  vertical-align: top;   /* Etkinlikler yukarıdan başlasın */
+  height: 100%;          /* Satır yüksekliğine uy */
+  width: calc(100% / 7); /* 7 gün için eşit genişlik */
+  overflow: hidden;      /* Taşan içerik için scroll satırda olacak */
+}
+
+.fc-daygrid-day-events {
+  max-height: 100%;      /* Satır yüksekliği ile sınırlı */
+  overflow-y: auto;      /* Çok etkinlik varsa scroll */
+  flex-grow: 1;
+}
+
+.fc-daygrid-body .fc-row {
+  height: 120px;        /* Sabit satır yüksekliği */
+}
+
+.fc-daygrid-day-frame {
+  height: 100%;           /* Satır yüksekliğine uyumlu */
+  display: flex;
+  flex-direction: column;
+}
+
+.fc .fc-col-header {
+  background-color: #00b5bb; /* İstediğin renk */
+  font-weight: bold;          /* İsteğe bağlı kalın yazı */
+}
+
+.fc .fc-col-header-cell .fc-col-header-cell-cushion {
+  padding: 10px 0;           /* Üst-alt boşluk */
+  text-align: center;
+  text-transform: uppercase;  /* İsteğe bağlı, büyük harf yapar */
+  color: #ffffff;
+}
+
+.fc-timegrid-event {
+  margin: 1px 2px;         /* Kutular arasında küçük boşluk */
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fc-timegrid-body {
+  overflow-y: auto;
+  max-height: 600px; /* İsteğe göre ayarla */
+}
