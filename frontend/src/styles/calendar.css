@@ -1,0 +1,91 @@
+.calendar-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+}
+
+.fc .fc-toolbar-title {
+  font-size: 1.25rem;
+  text-transform: capitalize;
+}
+
+.fc .fc-button-primary {
+  background: #fff;
+  border-color: #cbd5e1;
+  color: #334155;
+  text-transform: capitalize;
+}
+
+.fc .fc-button-primary:hover,
+.fc .fc-button-primary:not(:disabled).fc-button-active {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: #fff;
+}
+
+.fc .fc-col-header-cell {
+  background: #f1f5f9;
+  padding: 6px 0;
+}
+
+.fc .fc-day-today {
+  background: #eff6ff !important;
+}
+
+.fc-event {
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+/* Onay bekleyen: çizgili, soluk */
+.fc-event.event-pending {
+  opacity: 0.75;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.35) 0 6px,
+    transparent 6px 12px
+  );
+}
+
+/* İade edilmiş (tamamlanmış) */
+.fc-event.event-returned {
+  opacity: 0.45;
+}
+
+/* Teslim alınmış ve süresi geçmiş */
+.fc-event.event-overdue {
+  border-width: 2px;
+  border-style: solid;
+  box-shadow: 0 0 0 1px #dc2626;
+}
+
+.calendar-legend {
+  display: flex;
+  gap: 14px;
+}
+
+.legend-item::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 10px;
+  margin-right: 5px;
+  border-radius: 2px;
+  vertical-align: middle;
+  background: #64748b;
+}
+
+.legend-pending::before {
+  opacity: 0.75;
+  background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.45) 0 3px, transparent 3px 6px);
+}
+
+.legend-returned::before {
+  opacity: 0.45;
+}
+
+.legend-overdue::before {
+  background: #fff;
+  border: 2px solid #dc2626;
+}
