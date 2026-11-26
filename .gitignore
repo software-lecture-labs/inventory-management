@@ -1,24 +1,24 @@
-# Compiled class file
-*.class
+# --- Backend (Maven / Java) ---
+backend/target/
+backend/.mvn/wrapper/maven-wrapper.jar
 
-# Log file
-*.log
+# --- Frontend (Node / Vite) ---
+frontend/node_modules/
+frontend/dist/
 
-# BlueJ files
-*.ctxt
+# --- Ortam değişkenleri ---
+.env
+.env.*
+!.env.example
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+# --- IDE ---
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
 
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+# --- İşletim sistemi ---
+.DS_Store
+Thumbs.db
